@@ -13,5 +13,5 @@ def bubble_sort(array)
     end
     array
 end
-a=[1,3,1,3,2,4,1,5,2]
+a=[4,3,78,2,0,2]
 p bubble_sort(a)
