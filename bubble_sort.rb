@@ -1,4 +1,3 @@
-require 'pry'
 def bubble_sort(array)
   swap = 1
   sorted_element = 0
@@ -7,7 +6,6 @@ def bubble_sort(array)
     array.each_with_index do |_item, index|
       break if index == array.length - 1 - sorted_element
 
-      # binding.pry
       if array[index] > array[index + 1]
         array[index], array[index + 1] = array[index + 1], array[index]
         swap += 1
