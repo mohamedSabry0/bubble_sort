@@ -16,14 +16,13 @@ def bubble_sort(array = [4, 3, 78, 2, 0, 2])
   array
 end
 
-def bubble_sort_by(array = [4, 2, 1, 7], &procedure)
+def bubble_sort_by(array = [4, 2, 1, 7])
   (0...array.size).each do |_g|
     (0...array.size).each do |l|
       next if l + 1 == array.size
 
       value = yield(array[l], array[l + 1])
       next unless value.positive?
-      
 
       aux = array[l + 1]
       array[l + 1] = array[l]
@@ -32,5 +31,3 @@ def bubble_sort_by(array = [4, 2, 1, 7], &procedure)
   end
   array
 end
-
-procedure = Proc.new { |x,y| x - y}
