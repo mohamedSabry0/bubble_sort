@@ -19,3 +19,23 @@ def bubble_sort(array)
 end
 a = [4, 3, 78, 2, 0, 2]
 p bubble_sort(a)
+
+def bubble_sort_by(array)
+  (0...array.size).each do |_g|
+    (0...array.size).each do |l|
+      next if l + 1 == array.size
+
+      value = yield(array[l], array[l + 1])
+      next unless value.positive?
+      
+
+      aux = array[l + 1]
+      array[l + 1] = array[l]
+      array[l] = aux
+    end
+  end
+  array
+end
+
+p bubble_sort_by ([4, 2, 1, 7]) { |x,y| x - y}
+
