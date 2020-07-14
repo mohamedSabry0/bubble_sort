@@ -11,7 +11,7 @@
 **In order to start you can use `bubble_sort` or `burble_sort_by`**
 **If you are using bubble_sort run `bubble_sort()`**
 **If you are using bubble_sort_by make sure you pass a block `bubble_sort_by(){|x,y| x-y }`**
-**You can pass the array of your choise**
+**You can pass the array of your choice**
 
 ## Authors
 
